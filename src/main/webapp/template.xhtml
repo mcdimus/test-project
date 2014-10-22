@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+  <h:head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <h:outputStylesheet name="./css/default.css"/>
+    <h:outputStylesheet name="./css/cssLayout.css"/>
+    <title><ui:insert name="title">title</ui:insert></title>
+  </h:head>
+
+  <h:body>
+    <ui:insert name="metadata" />
+
+    <div id="top" class="top">
+      <h2>
+        <ui:insert name="title"></ui:insert>
+      </h2>
+    </div>
+    <div>
+      <div id="left">
+        <h3>Menu</h3>
+        <ul>
+          <li><h:link outcome="/index" value="Start Page" /></li>
+          <li><h:link outcome="/gunRack/list" value="First Task" /></li>
+          <!--<li><h:link outcome="second" value="Second Task" /></li>-->
+        </ul>
+      </div>
+      <div id="content" class="left_content">
+        <ui:insert name="content">Content</ui:insert>
+      </div>
+    </div>
+  </h:body>
+
+</html>
